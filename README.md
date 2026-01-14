@@ -1,4 +1,4 @@
-# Data Scientist
+# Data Science Student
 [About Me](#about-me) | [Portfolio](#portfolio) | [Blog](#blog)
 
 ---
