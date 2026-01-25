@@ -1,4 +1,4 @@
-## Blog
+# Blog
 
 ### First Blog
 #### Why learning data science in social and interdisciplinary contexts matters
