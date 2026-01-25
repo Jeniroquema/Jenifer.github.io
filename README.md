@@ -1,5 +1,5 @@
 # Data Science Student
-[About Me](READ.md) | [Portfolio](portfolio.md) | [Blog](blog.md)
+[About Me](README.md) | [Portfolio](portfolio.md) | [Blog](blog.md)
 
 ---
 
