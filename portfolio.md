@@ -19,23 +19,37 @@ Key columns include:
 
 The dataset contains several thousand games, spanning over four decades, which allows for exploration of long-term trends in game genres, ratings, and popularity. Some data may be missing or incomplete, for example, not every game may have a high number of reviews or a full genre classification. Additionally, some games were released decades ago, before online communities and rating platforms were widespread, so older titles may have fewer ratings or reviews, and their popularity may not be fully captured compared to more recent releases. Because popularity is community-driven rather than measured by sales, this analysis assumes that user ratings, reviews, and times listed serve as reasonable proxies for popularity and audience reception.
 
-The video game dataset required several cleaning and preparation steps before exploratory analysis could be performed. 
-First, the dataset was loaded and inspected using df.info() and df.head() to understand the structure, data types, and presence of missing values.
+Before analyzing the video game dataset, several cleaning and preparation steps were performed to ensure consistency and interpretability:
 
-A duplicate check was performed using the duplicated().sum() function, none were found, meaning no records were removed.
+- **Initial inspection:** The dataset was loaded and inspected to understand its structure, data types, and missing values. No duplicate rows were found, so no records were removed.
 
-To focus the analysis on variables relevant to the research question, the dataset was reduced to key columns which included title, release date, genre, user rating, times listed, and number of reviews. 
+- **Focused columns:** Only the variables relevant to the research question were retained: title, genres, user rating, times listed, and number of reviews.
 
-Some popularity-related variables were originally stored as strings using abbreviations, such as “3.9k”, which prevented numerical analysis. These values were converted into numeric form by removing the “K” and multiplying by 1,000, allowing for comparison and visualization.
+- **Popularity metrics conversion:** Columns like 'Times Listed' and 'Number of Reviews' used abbreviations such as "3.9k". These were converted to numeric values to enable accurate analysis and comparison.  
+
+```python
+def convert_k(value):
+    if isinstance(value, str):
+        value = value.replace('K', '')
+        return float(value) * 1000
+    return value
+
+df['Times Listed'] = df['Times Listed'].apply(convert_k)
+df['Number of Reviews'] = df['Number of Reviews'].apply(convert_k)
+df.head()
+```
  
-Additionally, the release date column was converted into a numeric release year to enable analysis of trends over time. Rows with missing ratings or unstructured release dates were excluded from analysis requiring those values. 
+- **Assumptions & trade-offs:**
+  - Abbreviated popularity values were assumed to be consistent.
+  - Retaining only complete values ensured analysis integrity while slightly reducing dataset   size.
+  - Multi-genre games were treated as separate rows, which may slightly over-represent those games in genre-level analyses.
 
 These steps ensure the dataset is consistent and interpretable while also maintaining as much information as possible. 
 
 The first visualization I created was a horizontal bar chart showing the average user rating for each game genre. The reasoning behind this was because it makes it easy to compare averages across categories, the layout has easier readability since genre names can get long and it ties into the question: Which genres are rated highest by users?
 
 ### Average Rating by Genre
-![Average Rating by Genre](average_rating_by_genre.png)
+![Average Rating by Genre](avg_user.png)
 
 Based on the chart, we are able to see that the Visual Novel, Turn Based Strategy, RPG, and Puzzle genres have the highest average ratings, around 3.8-4.0. MOBA and Quiz/Trivia appear at the bottom, which noticeably lower average ratings. Most genres cluster between 3.4 and 3.8, suggesting ratings are generally positive.
 From this we can interpret that Story-driven and strategy focused games tend to receive stronger user satisfaction. Highly competitive and MOBAs may receive more mixed reviews, possibly due to larger audiences and higher expectations. Now we know which genres are most well received, not just most popular, which is important when comparing quality vs popularity. 
@@ -45,7 +59,7 @@ From this we can interpret that Story-driven and strategy focused games tend to 
 In my second visualization, I created another horizontal bar chart that shows the average number of times games are listed for each genre, a proxy being used for popularity. I decided on another bar chart because popularity varies widely and with this I can identify relative differences by matching it with the rating chart for comparison. This also answers the question: Which genres are most common or popular?
 
 ### Average Popularity by Genre
-![Average Popularity by Genre](average_popularity_by_genre.png)
+![Average Popularity by Genre](avg_popularity_Timeslisted.png)
 
 From what we are able to gather, MOBA and Sport genres are the most popular, with the highest average times listed. Platform, Indie, and Visual Novel also rank high in popularity, with Quiz/Trivia and Pinball being the least favored genres.
 From this, we are able to suggest that popularity does not necessarily mean higher ratings, genres with a larger player base may attract more listings but also more criticism. It’s also worth noting that niche genres may appear less often but still perform well in user satisfaction. This visualization shows what players are engaging with the most, allowing comparison against ratings to see whether popularity aligns with quality.
@@ -53,7 +67,7 @@ From this, we are able to suggest that popularity does not necessarily mean high
 My third visualization is a scatter plot comparing Times Listed (popularity) on the x-axis and User Rating on the y-axis. I chose this for easy exploration between two numeric variables and it helps support the question: Does higher popularity correlate with higher ratings?
 
 ### Popularity vs User Rating
-![Popularity vs User Rating](popularity_vs_rating.png)
+![Popularity vs User Rating](popularity_userrating.png)
 
 From what we can pull from this, we can see that ratings are mostly concentrated between 3.0 and 4.8, regardless of popularity as well as there being no strong linear correlation between popularity and rating. Some highly popular games have average or lower ratings while some less popular games receive very high ratings.
 This pattern indicates that popularity does not guarantee higher user satisfaction and well rated games can exist without mass exposure, larger audiences may lead to more varied opinions, which can lower average ratings. This visualization suggests that quality and popularity are not strongly correlated, reinforcing the findings from the genre comparison. 
