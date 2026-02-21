@@ -84,5 +84,12 @@ If I had more time or data, I would further explore including weighted ratings b
 
 Overall, this project focused on both the value and limitations of using community generated data to explore media popularity and quality. While the findings are exploratory, they provided meaningful insights into how genre, engagement, and user perception interact in video game culture.
 
+##### Sources: 
+https://www.kaggle.com/datasets/arnabchaki/popular-video-games-1980-2023/data
+https://www.codecademy.com/resources/docs/pandas/dataframe/explode
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.explode.html
+
+#### AI Transperency Statement
+ChatGPT (version 5.2) was used to help clarify the use of the pandas.DataFrame.explode() feature, refine explanations, and improve wording throughout the project. All coding, data cleaning, and analytical decisions—including implementing the explode() feature and interpreting results—were made independently by me.
 
 ## Project 2
