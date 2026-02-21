@@ -1,3 +1,5 @@
+# Blogs
+
 ### First Blog
 #### Why learning data science in social and interdisciplinary contexts matters
 Data science, a technical skill once not as known, now is used to shape many of the decisions that define everyday life. From the content we see online to the policies that affect education, healthcare, and housing, data-driven systems influence how resources are distributed and whose voices are amplified. Data is no longer just about numbers but rather it is about people, communities, and the structures that govern them.
