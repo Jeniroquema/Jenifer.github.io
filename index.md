@@ -1,5 +1,3 @@
-# Data Science Student
-
 [Portfolio](portfolio.md) | [Blog](blog.md)
 
 ---
