@@ -84,6 +84,9 @@ If I had more time or data, I would further explore including weighted ratings b
 
 Overall, this project focused on both the value and limitations of using community generated data to explore media popularity and quality. While the findings are exploratory, they provided meaningful insights into how genre, engagement, and user perception interact in video game culture.
 
+#### My Repository
+https://github.com/Jeniroquema/Jenifer.github.io.git
+
 #### Sources: 
 https://www.kaggle.com/datasets/arnabchaki/popular-video-games-1980-2023/data
 https://www.codecademy.com/resources/docs/pandas/dataframe/explode
