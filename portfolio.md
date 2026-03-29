@@ -147,7 +147,7 @@ The LASSO Regression model was trained on the training subset and then evaluated
 
 When analyzing the variables that influence the model’s performance (Figure 4), Complain (1.44) was the most significant predictor, drastically increasing the likelihood of churn. Conversely, Tenure (-0.18) and DaySinceLastOrder (-0.11) carried negative weights, meaning that deeper loyalty and more recent activity strongly push a customer toward staying. Interestingly, features like CashbackAmount had nearly zero influence, suggesting that financial incentives may be less powerful than high-quality service and complaint resolution. 
 
-![LASSO](p2LASSO.png)
+![LASSO](p2LASSOACUTAL.png)
 
 ##### Figure 4: LASSO Coefficients illustrating feature importance. Positive values (Complain) increase churn risk, while negative values (Tenure) decrease it.
 
