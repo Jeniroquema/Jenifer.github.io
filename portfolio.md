@@ -155,7 +155,7 @@ Based on these results, the company should prioritize a rapid response system fo
 
 #### Sources: 
 https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction
-https://firework.com/blog/customer-retention-statistics#:~:text=A%205%25%20increase%20in%20customer%20retention%20can,one%2C%20making%20retention%20a%20cost%2Deffective%20business%20strategy.
+https://firework.com/blog/customer-retention-statistics
 
 ###### AI Transperency Statement
 ###### Gemini was used to troubleshoot code error messages, optimize the LASSO regression syntax, and refine explanations throughout the project. All data cleaning, feature selection, and analytical decisions, including the implementation of median imputation and the interpretation of model coefficients were made by me.
