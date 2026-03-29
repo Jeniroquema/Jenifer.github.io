@@ -104,7 +104,7 @@ This project investigates a critical business question: What behavioral “red f
 #### Data
 The data for this project was sourced from the "E-Commerce Customer Churn Analysis and Prediction” dataset available on Kaggle. It consists of over 5,600 observations of customer activity, providing a comprehensive look at how users interact with a retail platform.
 Key columns include:
-Churn: Churn Flag 
+- Churn: Churn Flag 
 - Tenure: How long the customer has been with the company
 - WarehouseToHome: Distance from the warehouse to the home of the customer
 - Complain: Whether a customer has raised a concern recently
@@ -119,10 +119,17 @@ While the dataset provides a good foundation for predicting churn, several techn
 #### Preprocessing and Exploratory Data Analysis
 While the original dataset contained 20 variables, this analysis was trimmed to focus on six predictors: Churn, Complain, Tenure, WarehouseToHome, DaySinceLastOrder, and the CashbackAmount. These specific variables were selected to avoid overfitting and to focus the model on the most significant behavioral, loyalty, and logistical triggers. By removing redundant features like CityTier or Gender, the model remains efficient and focuses purely on actionable customer patterns.
 Upon the review of the e-commerce dataset, missing values were identified in three key features: Tenure (264 nulls), WarehouseToHome (251 nulls), and DaySinceLastOrder (307 nulls). To maintain the integrity of the 5,630 observations without discarding valuable data, median imputation was performed. The median was selected over the mean to ensure that outliers did not artificially skew the distribution. After the imputation, a final verification confirmed a complete dataset of 5,630 non-null entries across all six selected variables.
-(Figure 1)
+
+![Pairplot](p2pairplot.png)
+
+##### (Figure 1)
+
 This pairplot confirms a significant class imbalance in our target variable, meaning there are far more customers who stayed than those who left. Because the ‘Churn’ group is the minority, we will prioritize specialized metrics (ROC-AUC) to ensure the model doesn’t get ‘lazy’ by simply guessing that everyone stays.
 Take a look at the scatter plot where Churn is on one axis and Complain is on the other. You’ll see that while many people stay (0) regardless of complaints, a huge chunk of those who left (1) have a complaint maker. This suggests a strong relationship between customer complaints and churn behavior, identifying ‘Complain’ as a likely high-importance feature for our predictive model.
-(Figure 2)
+
+![Heatmap](p2heatmapcorr.png)
+
+##### (Figure 2)
 
 In addition, a Correlation Matrix was performed to check for multicollinearity among the selected features. The analysis showed that all variables maintained a correlation below 0.50, indicating that each feature provides unique predictive value without redundancy. While these individual correlations appear moderate, this is a characteristic of behavioral data where no single factor indicates a customer’s decision. Specifically, Tenure showed the strongest negative relationship with Churn (-0.34), suggesting that loyalty grows over time, while Complain showed a positive relationship (0.25), serving as a primary “red flag” for departure. 
 
@@ -134,12 +141,15 @@ The primary model implemented was Logistic Regression with LASSO (L1) Regulariza
 #### Results
 The LASSO Regression model was trained on the training subset and then evaluated on the unseen testing set. This returned a Test ROC-AUC Score of 0.8317 and an overall Accuracy of 0.8588. These results indicate that the model does a strong job at distinguishing between loyalists and at-risk customers. While the accuracy is high, the Confusion Matrix (Figure 3) provides a more nuanced view, showing that the model correctly identified 898 retained customers while successfully flagging a segment of the at-risk population for intervention.
 
-Figure 3: Confusion Matrix showing the distribution of predicted vs. actual churn. The model correctly identified 898 retained customers.
+![CorrelationM](p2confusionmatrix.png)
+
+##### Figure 3: Confusion Matrix showing the distribution of predicted vs. actual churn. The model correctly identified 898 retained customers.
 
 When analyzing the variables that influence the model’s performance (Figure 4), Complain (1.44) was the most significant predictor, drastically increasing the likelihood of churn. Conversely, Tenure (-0.18) and DaySinceLastOrder (-0.11) carried negative weights, meaning that deeper loyalty and more recent activity strongly push a customer toward staying. Interestingly, features like CashbackAmount had nearly zero influence, suggesting that financial incentives may be less powerful than high-quality service and complaint resolution. 
 
+![LASSO](p2LASSO.png)
 
-Figure 4: LASSO Coefficients illustrating feature importance. Positive values (Complain) increase churn risk, while negative values (Tenure) decrease it.
+##### Figure 4: LASSO Coefficients illustrating feature importance. Positive values (Complain) increase churn risk, while negative values (Tenure) decrease it.
 
 Based on these results, the company should prioritize a rapid response system for customer complaints. Since complaints are the primary “red flag” for departure, resolving these issues in real-time could significantly increase retention and long-term profitability.
 
@@ -148,4 +158,4 @@ https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis
 https://firework.com/blog/customer-retention-statistics#:~:text=A%205%25%20increase%20in%20customer%20retention%20can,one%2C%20making%20retention%20a%20cost%2Deffective%20business%20strategy.
 
 ###### AI Transperency Statement
-###### Gemini was used to troubleshoot code error messages, optimize the LASSO regression syntax, and refine explanations throughout the project. All data cleaning, feature selection, and analytical decisions, including the implementation of median imputation and the interpretation of model coefficients—were made by me.
+###### Gemini was used to troubleshoot code error messages, optimize the LASSO regression syntax, and refine explanations throughout the project. All data cleaning, feature selection, and analytical decisions, including the implementation of median imputation and the interpretation of model coefficients were made by me.
