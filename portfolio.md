@@ -103,8 +103,9 @@ This project investigates a critical business question: What behavioral “red f
 
 #### Data
 The data for this project was sourced from the "E-Commerce Customer Churn Analysis and Prediction” dataset available on Kaggle. It consists of over 5,600 observations of customer activity, providing a comprehensive look at how users interact with a retail platform.
+
 Key columns include:
-- Churn: Churn Flag 
+- Churn: Whether or not the customer left the platform  
 - Tenure: How long the customer has been with the company
 - WarehouseToHome: Distance from the warehouse to the home of the customer
 - Complain: Whether a customer has raised a concern recently
