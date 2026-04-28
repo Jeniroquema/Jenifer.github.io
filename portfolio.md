@@ -1,6 +1,6 @@
 # Projects
 ### [An Exploratory Analysis of Video Game Ratings and Popularity](project1.md)
-![Video Game Genre Analysis](average_popularity_by_genre.png)
+![Video Game Genre Analysis](marioimage.jpg)
 *A data-driven look at which genres dominate player ratings versus market popularity.*
 
 ---
