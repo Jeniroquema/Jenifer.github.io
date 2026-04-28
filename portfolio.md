@@ -1,5 +1,7 @@
 # Projects
-[View Project Details](project1.md)
+[An Exploratory Analysis of Video Game Ratings and Popularity Across Genres](project1.md)
+[The High Cost of “Goodbye”](project2.md)
+[The Anxiety of the “Unknown Drop”](project3.md)
 
 #### My Repository
 https://github.com/Jeniroquema/Jenifer.github.io.git
