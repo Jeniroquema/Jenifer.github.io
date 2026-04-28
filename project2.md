@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 ### The High Cost of “Goodbye”
 
 #### Introduction
