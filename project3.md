@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 ### The Anxiety of the “Unknown Drop”
 
 #### Introduction
