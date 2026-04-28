@@ -14,7 +14,7 @@
 ---
 
 ### [The Anxiety of the “Unknown Drop”](project3.md)
-![Data Trends](avg_popularity_Timeslisted.png)
+![Data Trends](trading_graphs.jpg)
 
 *Examining market volatility and investor behavior within the critical 5-day window of a price drop.*
 
