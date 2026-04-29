@@ -1,3 +1,5 @@
+# Projects
+
 ### [An Exploratory Analysis of Video Game Ratings and Popularity](project1.md)
 ![Video Game Genre Analysis](marioimage.jpg)
 
