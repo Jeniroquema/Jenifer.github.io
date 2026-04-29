@@ -3,10 +3,7 @@ title: Jenifer's homepage
 description: Bookmark this to keep an eye on my project updates!
 
 minima:
-  nav:
-    - title: About Me
-      url: /
-    - title: Projects
-      url: /portfolio.html
-    - title: Blogs
-      url: /blog.html
+  header_pages:
+    - blog.md
+    - index.md
+    - portfolio.md
