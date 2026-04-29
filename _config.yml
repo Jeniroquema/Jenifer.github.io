@@ -2,7 +2,8 @@ theme: Minima
 title: Jenifer's homepage
 description: Bookmark this to keep an eye on my project updates!
 
-header_pages:
-  - blog.md
-  - index.md
-  - portfolio.md
+minima:
+  header_pages:
+    - blog.md
+    - index.md
+    - portfolio.md
