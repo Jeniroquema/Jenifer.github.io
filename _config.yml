@@ -4,6 +4,6 @@ description: Bookmark this to keep an eye on my project updates!
 
 minima:
   header_pages:
-    - blog.md
     - index.md
-    - portfolio.md 
+    - portfolio.md
+    - blog.md
