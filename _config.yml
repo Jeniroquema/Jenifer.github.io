@@ -1,8 +1,8 @@
-theme: Minima
+theme: minima
 title: Jenifer's homepage
 description: Bookmark this to keep an eye on my project updates!
 
-Minima:
+minima:
   header_pages:
     - blog.md
     - index.md
