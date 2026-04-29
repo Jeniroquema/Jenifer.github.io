@@ -1,4 +1,5 @@
 ---
+nav_exclude: true 
 show_in_nav: false
 ---
 
