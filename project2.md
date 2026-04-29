@@ -1,5 +1,5 @@
 ---
-nav_exclude: true
+show_in_nav: false
 ---
 
 ### The High Cost of “Goodbye”
