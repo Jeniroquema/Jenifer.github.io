@@ -62,3 +62,4 @@ We also face the challenge of “Information Inequality”. While the code behin
 
 ###### AI Transparency Statement
 ###### Gemini was used to troubleshoot code syntax and refine the clarity of this portfolio. All core project decisions—including dataset selection, variable identification, and model implementation—were made by our team. The final analytical conclusions and interpretations of financial trends is original work, building our background in data science and prior research in data modeling.
+###### [View the Technical Report](https://docs.google.com/document/d/1r-pa9ETgOIihCbjI67tR5w485km9CKFMN9YYilcSI_I/edit?usp=sharing)
