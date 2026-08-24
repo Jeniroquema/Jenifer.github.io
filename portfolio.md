@@ -25,6 +25,12 @@
 
 *Investigating how anatomical feature mapping and statistical weighting can improve the accuracy and interpretability of early Alzheimer's detection.*
 
+---
+
+### [AutoDealer Pro: Automated Commission Tracking & Multi-Tier Approvals](project5.md)
+![cardealership](cardealerlaptop.png)
+
+*Automating dealership commission pipelines through a full-stack Django/MySQL architecture built with secure TOTP authentication and dynamic payroll deduction logic.*
 
 ---
 
