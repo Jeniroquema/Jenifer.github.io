@@ -20,6 +20,14 @@
 
 ---
 
+### [The Architecture of Memory: Decoding Alzheimer’s with Machine Learning](project4.md) 
+![MRI](mriimages.png) 
+
+*Investigating how anatomical feature mapping and statistical weighting can improve the accuracy and interpretability of early Alzheimer's detection.*
+
+
+---
+
 #### My Repository
 https://github.com/Jeniroquema/Jenifer.github.io.git
 
